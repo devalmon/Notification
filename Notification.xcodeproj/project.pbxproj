@@ -14,6 +14,8 @@
 		8A0208562476CA7700CE786C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A0208552476CA7700CE786C /* Assets.xcassets */; };
 		8A0208592476CA7700CE786C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0208572476CA7700CE786C /* LaunchScreen.storyboard */; };
 		8A02085C2476CA7700CE786C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A02085B2476CA7700CE786C /* main.m */; };
+		8A0208642477197500CE786C /* Goverment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0208632477197500CE786C /* Goverment.m */; };
+		8A020867247726A000CE786C /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A020866247726A000CE786C /* Doctor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		8A0208582476CA7700CE786C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A02085A2476CA7700CE786C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A02085B2476CA7700CE786C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A0208622477197500CE786C /* Goverment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Goverment.h; sourceTree = "<group>"; };
+		8A0208632477197500CE786C /* Goverment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Goverment.m; sourceTree = "<group>"; };
+		8A020865247726A000CE786C /* Doctor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		8A020866247726A000CE786C /* Doctor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,10 @@
 		8A0208482476CA7500CE786C /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				8A020865247726A000CE786C /* Doctor.h */,
+				8A020866247726A000CE786C /* Doctor.m */,
+				8A0208622477197500CE786C /* Goverment.h */,
+				8A0208632477197500CE786C /* Goverment.m */,
 				8A0208492476CA7500CE786C /* AppDelegate.h */,
 				8A02084A2476CA7500CE786C /* AppDelegate.m */,
 				8A02084C2476CA7500CE786C /* SceneDelegate.h */,
@@ -148,7 +158,9 @@
 			files = (
 				8A0208512476CA7500CE786C /* ViewController.m in Sources */,
 				8A02084B2476CA7500CE786C /* AppDelegate.m in Sources */,
+				8A020867247726A000CE786C /* Doctor.m in Sources */,
 				8A02085C2476CA7700CE786C /* main.m in Sources */,
+				8A0208642477197500CE786C /* Goverment.m in Sources */,
 				8A02084E2476CA7500CE786C /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,12 @@
 //
 
 #import "SceneDelegate.h"
+#import "Goverment.h"
+#import "Doctor.h"
 
 @interface SceneDelegate ()
+
+@property (strong, nonatomic) Goverment *goverment;
 
 @end
 
@@ -19,8 +23,41 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    self.goverment = Goverment.new;
+    
+    Doctor *doc1 = Doctor.new;
+    Doctor *doc2 = Doctor.new;
+    Doctor *doc3 = Doctor.new;
+    Doctor *doc4 = Doctor.new;
+    
+    doc1.salary = doc2.salary = doc3.salary = doc4.salary = self.goverment.salary;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(govermentNotification:)
+                                                 name:GovermentTaxLevelDidChangeNotification
+                                               object:nil];
+    
+    self.goverment.salary = 1100;
+    self.goverment.taxLevel = 5.5;
+    self.goverment.pension = 550;
+    self.goverment.avgPrice = 15;
+    
+    self.goverment.taxLevel = 5.5;
+    self.goverment.taxLevel = 5.5;
+    self.goverment.taxLevel = 5.5;
+
+    self.goverment.salary = 1050;
+    
+    self.goverment.salary = 2000;
 }
 
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void) govermentNotification: (NSNotification *) notification {
+    NSLog(@"govermentNotification userInfo = %@", notification.userInfo);
+};
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
